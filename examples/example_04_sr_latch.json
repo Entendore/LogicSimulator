@@ -1,0 +1,78 @@
+{
+  "components": [
+    {
+      "name": "SWITCH_SET",
+      "type": "SWITCH",
+      "x": -300,
+      "y": -60
+    },
+    {
+      "name": "SWITCH_RESET",
+      "type": "SWITCH",
+      "x": -300,
+      "y": 60
+    },
+    {
+      "name": "NOR_1",
+      "type": "NOR",
+      "x": -50,
+      "y": -60
+    },
+    {
+      "name": "NOR_2",
+      "type": "NOR",
+      "x": -50,
+      "y": 60
+    },
+    {
+      "name": "LED_Q",
+      "type": "LED",
+      "x": 200,
+      "y": -60
+    },
+    {
+      "name": "LED_QR",
+      "type": "LED",
+      "x": 200,
+      "y": 60
+    }
+  ],
+  "connections": [
+    [
+      "SWITCH_SET",
+      "Q",
+      "NOR_1",
+      "A"
+    ],
+    [
+      "NOR_2",
+      "Y",
+      "NOR_1",
+      "B"
+    ],
+    [
+      "NOR_1",
+      "Y",
+      "LED_Q",
+      "A"
+    ],
+    [
+      "NOR_1",
+      "Y",
+      "NOR_2",
+      "A"
+    ],
+    [
+      "SWITCH_RESET",
+      "Q",
+      "NOR_2",
+      "B"
+    ],
+    [
+      "NOR_2",
+      "Y",
+      "LED_QR",
+      "A"
+    ]
+  ]
+}
