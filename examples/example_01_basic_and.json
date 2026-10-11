@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "name": "SWITCH_1",
+      "type": "SWITCH",
+      "x": -200,
+      "y": -20
+    },
+    {
+      "name": "SWITCH_2",
+      "type": "SWITCH",
+      "x": -200,
+      "y": 20
+    },
+    {
+      "name": "AND_1",
+      "type": "AND",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "LED_1",
+      "type": "LED",
+      "x": 200,
+      "y": 0
+    }
+  ],
+  "connections": [
+    [
+      "SWITCH_1",
+      "Q",
+      "AND_1",
+      "A"
+    ],
+    [
+      "SWITCH_2",
+      "Q",
+      "AND_1",
+      "B"
+    ],
+    [
+      "AND_1",
+      "Y",
+      "LED_1",
+      "A"
+    ]
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "components": [
+    {
+      "name": "SWITCH_1",
+      "type": "SWITCH",
+      "x": -300,
+      "y": -40
+    },
+    {
+      "name": "SWITCH_2",
+      "type": "SWITCH",
+      "x": -300,
+      "y": 40
+    },
+    {
+      "name": "XOR_1",
+      "type": "XOR",
+      "x": -80,
+      "y": -40
+    },
+    {
+      "name": "AND_1",
+      "type": "AND",
+      "x": -80,
+      "y": 40
+    },
+    {
+      "name": "LED_SUM",
+      "type": "LED",
+      "x": 150,
+      "y": -40
+    },
+    {
+      "name": "LED_CARRY",
+      "type": "LED",
+      "x": 150,
+      "y": 40
+    }
+  ],
+  "connections": [
+    [
+      "SWITCH_1",
+      "Q",
+      "XOR_1",
+      "A"
+    ],
+    [
+      "SWITCH_1",
+      "Q",
+      "AND_1",
+      "A"
+    ],
+    [
+      "SWITCH_2",
+      "Q",
+      "XOR_1",
+      "B"
+    ],
+    [
+      "SWITCH_2",
+      "Q",
+      "AND_1",
+      "B"
+    ],
+    [
+      "XOR_1",
+      "Y",
+      "LED_SUM",
+      "A"
+    ],
+    [
+      "AND_1",
+      "Y",
+      "LED_CARRY",
+      "A"
+    ]
+  ]
+}

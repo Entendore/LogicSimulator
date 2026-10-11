@@ -1,0 +1,102 @@
+{
+  "components": [
+    {
+      "name": "SWITCH_A",
+      "type": "SWITCH",
+      "x": -400,
+      "y": -40
+    },
+    {
+      "name": "SWITCH_B",
+      "type": "SWITCH",
+      "x": -400,
+      "y": 40
+    },
+    {
+      "name": "SWITCH_SELECT",
+      "type": "SWITCH",
+      "x": -400,
+      "y": -140
+    },
+    {
+      "name": "NOT_1",
+      "type": "NOT",
+      "x": -200,
+      "y": -140
+    },
+    {
+      "name": "AND_1",
+      "type": "AND",
+      "x": -50,
+      "y": -40
+    },
+    {
+      "name": "AND_2",
+      "type": "AND",
+      "x": -50,
+      "y": 40
+    },
+    {
+      "name": "OR_1",
+      "type": "OR",
+      "x": 120,
+      "y": 0
+    },
+    {
+      "name": "LED_OUT",
+      "type": "LED",
+      "x": 300,
+      "y": 0
+    }
+  ],
+  "connections": [
+    [
+      "SWITCH_A",
+      "Q",
+      "AND_1",
+      "A"
+    ],
+    [
+      "NOT_1",
+      "Y",
+      "AND_1",
+      "B"
+    ],
+    [
+      "SWITCH_B",
+      "Q",
+      "AND_2",
+      "A"
+    ],
+    [
+      "SWITCH_SELECT",
+      "Q",
+      "AND_2",
+      "B"
+    ],
+    [
+      "SWITCH_SELECT",
+      "Q",
+      "NOT_1",
+      "A"
+    ],
+    [
+      "AND_1",
+      "Y",
+      "OR_1",
+      "A"
+    ],
+    [
+      "AND_2",
+      "Y",
+      "OR_1",
+      "B"
+    ],
+    [
+      "OR_1",
+      "Y",
+      "LED_OUT",
+      "A"
+    ]
+  ]
+}
